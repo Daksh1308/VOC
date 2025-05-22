@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Recipe Generator</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f9f9f9; }
+        textarea, input[type="text"] { width: 100%; padding: 10px; margin-top: 10px; }
+        button { padding: 10px 20px; background-color: #28a745; color: white; border: none; margin-top: 10px; }
+        .recipe { white-space: pre-wrap; margin-top: 20px; background: #fff; padding: 20px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🍳 AI Recipe Generator</h1>
+    <form method="POST">
+        <label>Enter ingredients (comma-separated):</label>
+        <input type="text" name="ingredients" required>
+        <button type="submit">Generate Recipe</button>
+    </form>
+    {% if recipe %}
+    <div class="recipe">
+        <h2>Generated Recipe</h2>
+        <p>{{ recipe }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
